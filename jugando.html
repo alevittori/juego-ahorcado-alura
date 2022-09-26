@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugando</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload = 'obtenerTamanioActual();' onriseze = 'dimensiona_medidas_canvas();'>
+    <div class="container">
+        <div class="container--logo">
+            <!-- <a href="./index.html"> -->
+                <img src="./assets/img/alura-logo.png" alt="logo de alura" class="logo-alura">
+            <!-- </a> -->
+        </div>
+        <div class="muneco-container">
+            <canvas width="300 " height = "400" class="canvas_muneco" id="canvas_muneco"></canvas>
+        </div>
+        <div class="palabra-container">
+            <p id="palabra"></p>
+        </div>
+        <div class="letras-container">
+            <p id="letras-elegidas"></p>
+            <!--Hacer funcion que muestre las letras que ya van clickeando-->
+        </div>
+       
+        <p id="txt_iniciaJuego">Click en Nuevo Juego para comenzar partida</p>
+        <div class="buttons-container">
+            <button class="btn btn-newGame" id="btn-newGame">Nuevo Juego</button>
+            <button class="btn btn-desistir" id="btn-desistir" >Desistir</button>
+        </div>
+        <footer>
+            <p class="copy-text">
+                <img src="./assets/img/linkedin-logo.png" alt="logo linkedin" class="linkedin-ico"> 
+                <a href="https://www.linkedin.com/in/alejandro-vittori-631221247/">
+                    Vittori Alejandro
+                </a>
+                
+            </p>
+        </footer>
+    </div>
+
+
+    <script src="./var.js"></script>
+    <script src="./juego.js"></script>
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js "> </script> 
+    <!-- <script src="./codigo.js"></script> -->
+</body>
+
+</html>

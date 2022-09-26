@@ -1,0 +1,330 @@
+/* import  */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;900&display=swap');
+/* font-family: 'Inter', sans-serif;  */
+
+
+/* VARIABLES  */
+:root{
+    /* color */
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500:  #052051;
+
+    --ligth-blue-100: #F3F5FC;
+    --ligth-blue-200: #EFF1FA;
+    --ligth-blue-300: #E9ECF8;
+    --ligth-blue-400: #AAB2D5;
+    --ligth-blue-500: #757FB2;
+
+    --gray-100: #CED4DA;
+    --gray-200:  #ADB5BD;
+    --gray-300: #868E96;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+
+    /* SHADOW  */
+    --shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+
+
+    /* measures */
+    --sm:1.2rem;
+    --md:1.6rem;
+    --lg:1.8rem;
+    --btn-br:2.4rem;
+
+    /* font-family */
+    --ff-main: 'Inter', sans-serif;
+
+}
+
+/* global style  */
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+
+    font-size: 62.5%; /* Para usar las medidas rem*/
+    font-family: var(--ff-main)
+}
+body{
+    background: var(--ligth-blue-200);
+}
+
+.btn{
+    border-radius: 2rem;
+    text-align: center;
+    width: 20rem;
+    height: 6.7rem;
+    
+}
+/* ************************************************* */
+        /* ESTILOS INDEX.HTML  */
+
+
+.container{
+    display: grid;
+    place-items: center; 
+
+}
+
+.container--logo{
+    justify-self: flex-start;
+}
+.logo-alura{
+    width: 3rem;
+    margin-top: 1.2rem;
+    margin-left: 1.2rem;
+
+}
+.agrega_palabra{
+    margin-top: 5rem;
+}
+#nueva_palabra{
+    border: none;
+    height: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    display: none;
+}
+.container--buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+}
+
+.btn-primary{
+    width: 25rem;
+    height: 8.5rem;
+
+    display: grid;
+    place-items: center;
+
+    border: none;
+    background-color: var(--dark-blue-500);
+    color: var(--ligth-blue-100);
+    font-weight: 400;
+    font-size: var(--md);
+    line-height: 1.9rem;
+    text-decoration: none;
+
+    margin-bottom: 2rem;
+
+
+}
+.btn-secondary{
+    width: 20rem;
+    height: 6.7rem;
+    border: 0.1rem solid var(--dark-blue-300);
+    color: var(--dark-blue-300);
+    font-size: var(--md);;
+    align-self: center;
+
+}
+
+footer{
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+.copy-text{
+    color: var(--dark-blue-200);
+    font-size: var(--sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.copy-text a{
+    text-decoration: none;
+    font-size: var(--sm);
+    color: var(--dark-blue-200);
+    margin-left: 0.5rem;
+   
+
+}
+
+.linkedin-ico{
+    width: 1.8rem;
+}
+/* ********************************************** */
+    /* ESTILO ADD_WORD.HTML  */
+
+.new-word-container{
+    margin-top: 10rem;
+    /* width: 300rem; */
+    justify-items: center;
+}
+
+.input-word{
+    width: 40rem;
+    height: 5rem;
+
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    
+    border: none;
+    border-radius: 5rem;
+    
+    color:#052051;
+   
+    background: transparent;
+}
+.input-word::placeholder{
+    color: var(--dark-blue-100);
+    font-weight: 300;
+    
+}
+
+.buttons-word{
+    margin-top: 10rem ;
+    display: grid;
+    gap: 2rem;
+    
+
+}
+.btn-save-word{
+    width: 30rem;
+    background-color: var(--dark-blue-500);
+    color: var(--ligth-blue-100);
+    font-size: var(--md);
+    line-height: 1.9rem;
+    border: none;
+
+
+}
+.btn-cancel-word{
+    width: 30rem;
+    background-color: transparent;
+    border: 0.1rem solid var(--dark-blue-500);
+    color: var(--dark-blue-500);
+}
+
+  /* FIN - ESTILO ADD_WORD.HTML  */
+
+
+/********************************/
+    /* ESTILO PARA LA PANTALLA DE JUEGO  */
+
+#palabra{
+    font-size: 5em;
+    font-weight: 600;
+    color: #0A3871;
+    justify-self: center;
+    text-align: center;
+
+}
+
+
+/* .letras-container{
+    
+} */
+#letras-elegidas{
+    font-size: 2em;
+    /* font-weight: 600;a */
+    color: var(--dark-blue-200);
+    justify-self: center;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+/* @media (max-width: 375px){
+    #palabra{
+        font-size: 5em;
+    }
+} */
+.buttons-container{
+    /* width: 100%; */
+    justify-self: center;
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0.5rem 1rem;
+    
+}
+
+.btn-newGame{
+    background-color: var(--dark-blue-500);
+    color: var(--ligth-blue-100);
+    font-size: 1.8rem;
+    border: none;
+}
+.btn-desistir{
+    color: var(--dark-blue-500);
+    font-size: 1.8rem;
+   
+
+}
+
+
+#txt_iniciaJuego{
+    font-size: 2rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+/**** FIN - ESTILO PARA LA PANTALLA DE JUEGO  ****/
+
+
+
+/* ************************************ */
+        /* MEDIAS QUERY  */
+
+/* para el index cuando es mas de 640px */
+@media (min-width:640px ){
+    .buttons{
+        margin-top: 22rem;
+    }
+    .buttons-word{
+        display: flex;
+        /* flex-direction: row; */
+        justify-self: center;
+    }
+   
+    .input-word{
+        justify-self: center;
+    }
+
+    .buttons-container{
+        display: flex;
+    }
+}
+
+@media (max-width: 375px){
+    .logo-alura{
+        width: 1.5rem;
+        margin: 0.5rem;
+    }
+    #palabra{
+        font-size: 2em;
+    }
+    .input-word{
+        width: auto;
+        height: 1.8rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    /* .container--logo{
+        display: none;
+    } */
+    /* escondo el canvas hasta que se de play al juego*/
+    /* .muneco-container{
+        display: none;
+    } */
+    #txt_iniciaJuego{
+        margin: 0 auto;
+    }
+    .buttons-container{
+        gap:1rem
+    }
+
+    #letras-elegidas{
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+}
